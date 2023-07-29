@@ -11,6 +11,7 @@ class QuizeScreen extends GetView<QuizController> {
 
   static const String routeName = '/quizescreen';
 
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -41,6 +42,9 @@ class QuizeScreen extends GetView<QuizController> {
             child: Obx(
               () => Column(
                 children: [
+                  LinearProgressIndicator(
+                    value: controller.consumedData.value,
+                  ),
                   if (controller.loadingStatus.value == LoadingStatus.loading)
                     const Expanded(
                         child: ContentArea(child: QuizScreenPlaceHolder())),
@@ -77,13 +81,42 @@ class QuizeScreen extends GetView<QuizController> {
                                             .currentQuestion
                                             .value!
                                             .answers[index];
+
+                                        final selectedAnswer = controller
+                                            .currentQuestion.value?.selectedAnswer;
+                                        final correctAnswer = controller
+                                            .currentQuestion.value?.correctAnswer;
+
+                                        final String answerText =
+                                            '${answer.identifier}. ${answer.answer}';
+
+                                        if (correctAnswer == selectedAnswer &&
+                                            answer.identifier == selectedAnswer) {
+                                          return CorrectAnswerCard(
+                                              answer: answerText);
+                                        }  else if (correctAnswer != selectedAnswer &&
+                                            answer.identifier == selectedAnswer) {
+                                          return WrongAnswerCard(answer: answerText);
+                                        } else if (selectedAnswer != null && correctAnswer ==
+                                            answer.identifier) {
+                                          return CorrectAnswerCard(
+                                              answer: answerText);
+                                        }
+
                                         return AnswerCard(
                                           isSelected: answer.identifier ==
                                               controller.currentQuestion.value!
                                                   .selectedAnswer,
                                           onTap: () {
-                                            controller.selectAnswer(
-                                                answer.identifier);
+
+                                            controller.checkAnswerSelectedOrNot(answer.identifier, index);
+                                            // controller
+                                            //     .currentQuestion
+                                            //     .value!
+                                            //     .answers[index].selectedAnswer = true;
+                                            //
+                                            // controller.selectAnswer(
+                                            //     answer.identifier);
                                           },
                                           answer:
                                               '${answer.identifier}. ${answer.answer}',

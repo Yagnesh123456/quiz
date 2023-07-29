@@ -17,6 +17,7 @@ class QuizController extends GetxController {
   Timer? _timer;
   int remainSeconds = 1;
   final time = '00:00'.obs;
+  var consumedData = 0.0.obs;
 
   @override
   void onReady() {
@@ -106,6 +107,10 @@ class QuizController extends GetxController {
     } else {
       loadingStatus.value = LoadingStatus.noReult;
     }
+
+    questionIndex.listen((index) {
+        consumedData.value = questionIndex.value / allQuestions.length;
+    });
   }
 
   Rxn<Question> currentQuestion = Rxn<Question>();
@@ -114,6 +119,7 @@ class QuizController extends GetxController {
   bool get isFirstQuestion => questionIndex.value > 0;
 
   bool get islastQuestion => questionIndex.value >= allQuestions.length - 1;
+
 
   void nextQuestion() {
     if (questionIndex.value >= allQuestions.length - 1) return;
@@ -171,4 +177,19 @@ class QuizController extends GetxController {
      _timer!.cancel();
      Get.offNamedUntil(HomeScreen.routeName, (route) => false);
   }
+
+  void checkAnswerSelectedOrNot(String? identifier, int index) {
+
+    if(currentQuestion
+        .value?.alreadySelectedAnswer == null || currentQuestion
+        .value?.alreadySelectedAnswer == false ){
+      currentQuestion
+          .value?.alreadySelectedAnswer = true;
+      selectAnswer(identifier);
+
+    }
+
+  }
+
+
 }

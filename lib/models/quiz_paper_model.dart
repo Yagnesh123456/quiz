@@ -66,6 +66,7 @@ class Question {
   List<Answer> answers;
   final String? correctAnswer;
   String? selectedAnswer;
+  bool? alreadySelectedAnswer;
 
   Question({
     required this.id,
