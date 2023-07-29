@@ -1,0 +1,124 @@
+{
+    "id": "ppr004",
+    "title": "Flutter",
+    "image_url": "",
+    "Description": "Basic Flutter Multiple Choice Questions (MCQ) to practice basic Flutter quiz answers",
+    "time_seconds": 300,
+    "questions": [
+        {
+            "id": "ppr004q001",
+            "question": "Which programming language is used to build Flutter applications?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Kotlin"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Dart"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Java"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Go"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q002",
+            "question": "How many types of widgets are there in Flutter?.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "4"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "8+"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q003",
+            "question": "A sequence of asynchronous Flutter events is known as a:",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Flow"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Current"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Stream"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Series"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr004q004",
+            "question": "Access to a cloud database through Flutter is available through which service?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "SQLite"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Firebase Database"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "NOSQL"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "MYSQL"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q005",
+            "question": "What element is used as an identifier for components when programming in Flutter?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Widgets"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Keys"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Elements"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Serial"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "id": "ppr002",
+    "title": "Android",
+    "image_url": "",
+    "Description": "Basic Android Multiple Choice Questions (MCQ) to practice basic Android quiz answers",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr002q001",
+            "question": "Android is licensed under which open source licensing license?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Gnu’s GPL"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Apache/MIT"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "OSS"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Sourceforge"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr002q002",
+            "question": "What year was the Open Handset Alliance announced?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2005"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "2006"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "2007"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "2008"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr002q003",
+            "question": "The R.java file is where you edit the resources for your project.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "True"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "False"
+                }
+
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr002q004",
+            "question": "Creating a UI (User Interface. in Android requires careful use of…",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Java and SQL"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "XML and Java"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "XML and C++"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Dreamweaver"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr002q005",
+            "question": "Status data will be exposed to the rest of the Android system via:",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Intents"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "A content provider"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Network receivers"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Altering permissions"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

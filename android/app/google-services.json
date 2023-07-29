@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "878284774216",
+    "project_id": "quiz-e086d",
+    "storage_bucket": "quiz-e086d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878284774216:android:d2301a2a831ad3b5d0317d",
+        "android_client_info": {
+          "package_name": "com.practical.quizdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878284774216-64m2acg8vjc6ka5hjsifj87185h53pir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKBwutmZI7KvjXZ_nUIR6P9vxfw6aEF-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878284774216-64m2acg8vjc6ka5hjsifj87185h53pir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878284774216:android:a0c97df9955ce72dd0317d",
+        "android_client_info": {
+          "package_name": "com.practical.quizsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878284774216-djv4mmj9e1qs6305rsparlm0hr01jdbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.practical.quizsample",
+            "certificate_hash": "f92e5ce3a1786a7e46e9c8349acc1013f9cd3d2d"
+          }
+        },
+        {
+          "client_id": "878284774216-64m2acg8vjc6ka5hjsifj87185h53pir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKBwutmZI7KvjXZ_nUIR6P9vxfw6aEF-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878284774216-64m2acg8vjc6ka5hjsifj87185h53pir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

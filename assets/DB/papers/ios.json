@@ -1,0 +1,121 @@
+{
+    "id": "ppr001",
+    "title": "IOS",
+    "image_url": "",
+    "Description": "Basic IOS Multiple Choice Questions (MCQ) to practice basic IOS quiz answers",
+    "time_seconds": 900,
+    
+    "questions": [
+        {
+            "id": "ppr001q001",
+            "question": "What is Full form of IOS?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Indian Operating System"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Internet Operating System"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Iphone Operating System"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Internetworking Operating System"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr001q002",
+            "question": "What is an arm?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "A processor"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "A thread"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "An operating system"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr001q003",
+            "question": "Which of the following is a default UI property in IOS?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "assign"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "non-atomic"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "atomic"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "None of Above"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr001q004",
+            "question": "Which of the following company owns Iphone?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Google LLC"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Microsoft Corporation"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Apple Inc."
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "IBM"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr001q005",
+            "question": "IOS was first released in ........",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2006"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "2007"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "2008"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "2005"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}
