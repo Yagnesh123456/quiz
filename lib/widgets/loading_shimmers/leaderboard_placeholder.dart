@@ -1,5 +1,5 @@
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:shimmer/shimmer.dart';
 
 class LeaderBoardPlaceHolder extends StatelessWidget {
@@ -22,7 +22,9 @@ class LeaderBoardPlaceHolder extends StatelessWidget {
               color: Theme.of(context).scaffoldBackgroundColor,
               shape: BoxShape.circle),
         ),
-        const SizedBox(width: 10,),
+        const SizedBox(
+          width: 10,
+        ),
         Expanded(
           child: Column(
             children: [
@@ -39,12 +41,20 @@ class LeaderBoardPlaceHolder extends StatelessWidget {
     return Shimmer.fromColors(
         baseColor: Colors.white.withOpacity(0.4),
         highlightColor: Colors.blueGrey.withOpacity(0.1),
-        child: EasySeparatedColumn(
-            children: [tile, tile, tile, tile, tile],
-            separatorBuilder: (_, __) {
-              return const SizedBox(
-                height: 25,
-              );
-            }));
+        child: Column(
+          children: [
+            tile,
+            verticalSpace(height: 25),
+            tile,
+            verticalSpace(height: 25),
+            tile,
+            verticalSpace(height: 25),
+            tile,
+            verticalSpace(height: 25),
+            tile
+          ],
+        ));
   }
+
+
 }

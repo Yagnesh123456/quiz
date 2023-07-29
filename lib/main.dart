@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       title: 'Flutter Demo',
       theme: Get.find<ThemeController>().getLightheme(),
-      darkTheme: Get.find<ThemeController>().getDarkTheme(),
+     // darkTheme: Get.find<ThemeController>().getDarkTheme(),
       getPages: AppRoutes.pages(),
       debugShowCheckedModeBanner: false,
     );

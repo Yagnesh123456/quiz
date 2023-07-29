@@ -1,5 +1,5 @@
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:shimmer/shimmer.dart';
 
 class QuizScreenPlaceHolder extends StatelessWidget {
@@ -23,32 +23,31 @@ class QuizScreenPlaceHolder extends StatelessWidget {
     return Shimmer.fromColors(
       baseColor: Colors.white.withOpacity(0.4),
       highlightColor: Colors.blueGrey.withOpacity(0.1),
-      child: EasySeparatedColumn(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        separatorBuilder: (BuildContext context, int index) {
-          return const SizedBox(
-            height: 20,
-          );
-        },
         children: [
-          EasySeparatedColumn(
+          Column(
             children: [
               line,
+              verticalSpace(height: 10),
               line,
+              verticalSpace(height: 10),
               line,
             ],
-            separatorBuilder: (BuildContext context, int index) {
-              return const SizedBox(
-                height: 10,
-              );
-            },
+
           ),
+          verticalSpace(height: 20),
           answer,
+          verticalSpace(height: 20),
           answer,
+          verticalSpace(height: 20),
           answer,
+          verticalSpace(height: 20),
           answer,
         ],
       ),
     );
   }
+
+
 }

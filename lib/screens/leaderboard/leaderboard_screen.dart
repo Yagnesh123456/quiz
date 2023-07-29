@@ -1,4 +1,3 @@
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
@@ -91,13 +90,9 @@ class LeaderBoardCard extends StatelessWidget {
         data.user.name,
         style: tsStyle,
       ),
-      subtitle: EasySeparatedRow(
+      subtitle: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        separatorBuilder: (BuildContext context, int index) {
-          return const SizedBox(
-            width: 12,
-          );
-        },
+
         children: [
           IconWithText(
             icon: Icon(
@@ -109,6 +104,9 @@ class LeaderBoardCard extends StatelessWidget {
               style: tsStyle,
             ),
           ),
+          SizedBox(
+            width: 12,
+          ),
           IconWithText(
             icon: Icon(
               Icons.timer,
@@ -118,6 +116,9 @@ class LeaderBoardCard extends StatelessWidget {
               '${data.time!}',
               style: tsStyle,
             ),
+          ),
+          SizedBox(
+            width: 12,
           ),
           IconWithText(
             icon: Icon(

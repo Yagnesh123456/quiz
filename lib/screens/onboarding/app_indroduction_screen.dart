@@ -1,4 +1,3 @@
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/themes/app_colors.dart';
@@ -16,16 +15,17 @@ class AppIntroductionScreen extends StatelessWidget {
         decoration: BoxDecoration(gradient: mainGradient(context)),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * 0.2),
-          child: EasySeparatedColumn(
-            separatorBuilder: (context, index) => const SizedBox(
-              height: 40,
-            ),
+          child: Column(
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Icon(
                 Icons.warning_amber_sharp,
                 size: 65,
                 color: kOnSurfaceTextColor,
+              ),
+              const SizedBox(
+                height: 40,
               ),
               const Text(
                 'This is not a production app. This quiz app is made for practical purpose the firebase integrations, state management, and the app flow.',
@@ -35,6 +35,9 @@ class AppIntroductionScreen extends StatelessWidget {
                   color: kOnSurfaceTextColor,
                   fontWeight: FontWeight.bold
                 ),
+              ),
+              const SizedBox(
+                height: 40,
               ),
               CircularButton(
                   onTap: () => Get.offAndToNamed(HomeScreen.routeName),

@@ -1,9 +1,9 @@
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/quiz_paper/quiz_papers_controller.dart';
 import 'package:quiz/models/models.dart';
+import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class RecentQuizCard extends StatelessWidget {
@@ -65,13 +65,8 @@ class RecentQuizCard extends StatelessWidget {
                                 Theme.of(context).textTheme.bodyText1!.color),
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
-                          child: EasySeparatedRow(
-                            separatorBuilder:
-                                (BuildContext context, int index) {
-                              return const SizedBox(
-                                width: 10,
-                              );
-                            },
+                          child: Row(
+
                             children: [
                               IconWithText(
                                 icon: const Icon(
@@ -80,6 +75,7 @@ class RecentQuizCard extends StatelessWidget {
                                 ),
                                 text: Text(recentTest.correctCount!),
                               ),
+                              horizontalSpace(width: 10),
                               IconWithText(
                                 icon: const Icon(
                                   Icons.timer,
@@ -87,6 +83,7 @@ class RecentQuizCard extends StatelessWidget {
                                 ),
                                 text: Text(recentTest.time!.toString()),
                               ),
+                              horizontalSpace(width: 10),
                               IconWithText(
                                 icon: const Icon(
                                   Icons.emoji_events_outlined,

@@ -1,5 +1,3 @@
-
-import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
@@ -7,6 +5,7 @@ import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/controllers/quiz_paper/quiz_papers_controller.dart';
 import 'package:quiz/models/quiz_paper_model.dart';
 import 'package:quiz/screens/screens.dart';
+import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class QuizPaperCard extends GetView<QuizPaperController> {
@@ -65,11 +64,8 @@ class QuizPaperCard extends GetView<QuizPaperController> {
                         ),
                         FittedBox(
                           fit: BoxFit.scaleDown,
-                          child: EasySeparatedRow(
-                            separatorBuilder:
-                                (BuildContext context, int index) {
-                              return const SizedBox(width: 15);
-                            },
+                          child: Row(
+
                             children: [
                               IconWithText(
                                   icon: Icon(Icons.help_outline_sharp,
@@ -79,6 +75,7 @@ class QuizPaperCard extends GetView<QuizPaperController> {
                                     style: kDetailsTS.copyWith(
                                         color: Colors.blue[700]),
                                   )),
+                              horizontalSpace(width: 15),
                               IconWithText(
                                   icon: const Icon(Icons.timer,
                                       color: Colors.blueGrey),
