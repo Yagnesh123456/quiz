@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class QuizOverviewScreen extends GetView<QuizController> {
@@ -32,7 +33,7 @@ class QuizOverviewScreen extends GetView<QuizController> {
                       ),
                       Obx(
                         () => Text(
-                          '${controller.time} Remining',
+                          '${controller.time} ${LANG_CONST.REMINING.toString().tr}',
                           style: countDownTimerTs(context),
                         ),
                       )
@@ -73,7 +74,7 @@ class QuizOverviewScreen extends GetView<QuizController> {
                   onTap: () {
                     controller.complete();
                   },
-                  title: 'Complete',
+                  title: LANG_CONST.COMPLETE.toString().tr,
                 ),
               ),
             )

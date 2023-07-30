@@ -2,6 +2,10 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, TargetPlatform;
+import 'package:get/get.dart';
+import 'package:quiz/utils/language_constant.dart';
+
+import 'utils/constants.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 
@@ -17,16 +21,16 @@ class DefaultFirebaseOptions {
     }
 
     throw UnsupportedError(
-      'DefaultFirebaseOptions are not supported for this platform.',
+      LANG_CONST.DEFAULT_FIREBASE_OPTION_ARE_NOT_SUPPORTED.toString().tr,
     );
   }
 
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsyYIqD5zFPx3ue3FPF0z9cLWbjobSdrY',
-    appId: 'com.practical.quizsample',
+    apiKey: API_KEY,
+    appId: APP_ID,
     messagingSenderId: '',
-    projectId: 'quiz-demo-ab9fc',
+    projectId: PROJECT_ID,
     storageBucket: '',
   );
 

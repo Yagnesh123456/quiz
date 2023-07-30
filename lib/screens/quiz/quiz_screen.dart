@@ -4,6 +4,7 @@ import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/firebase/loading_status.dart';
 import 'package:quiz/screens/quiz/quiz_overview_screen.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class QuizeScreen extends GetView<QuizController> {
@@ -34,7 +35,7 @@ class QuizeScreen extends GetView<QuizController> {
             ),
             showActionIcon: true,
             titleWidget: Obx(() => Text(
-                  'Q. ${(controller.questionIndex.value + 1).toString().padLeft(2, '0')}',
+                  '${LANG_CONST.Q.toString().tr} ${(controller.questionIndex.value + 1).toString().padLeft(2, '0')}',
                   style: kAppBarTS,
                 )),
           ),
@@ -111,15 +112,7 @@ class QuizeScreen extends GetView<QuizController> {
                                               controller.currentQuestion.value!
                                                   .selectedAnswer,
                                           onTap: () {
-
                                             controller.checkAnswerSelectedOrNot(answer.identifier, index);
-                                            // controller
-                                            //     .currentQuestion
-                                            //     .value!
-                                            //     .answers[index].selectedAnswer = true;
-                                            //
-                                            // controller.selectAnswer(
-                                            //     answer.identifier);
                                           },
                                           answer:
                                               '${answer.identifier}. ${answer.answer}',
@@ -162,7 +155,7 @@ class QuizeScreen extends GetView<QuizController> {
                                   onTap: () {
                                     controller.islastQuestion ?  Get.toNamed(QuizOverviewScreen.routeName) : controller.nextQuestion();
                                   },
-                                  title: controller.islastQuestion ? 'Complete' : 'Next',
+                                  title: controller.islastQuestion ? LANG_CONST.COMPLETE.toString().tr : LANG_CONST.NEXT.toString().tr,
                                 ),
                               ),
                             ),

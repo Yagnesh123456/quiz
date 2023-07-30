@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/themes/app_colors.dart';
 import 'package:quiz/screens/home/home_screen.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/common/circle_button.dart';
 
 class AppIntroductionScreen extends StatelessWidget {
@@ -27,10 +28,11 @@ class AppIntroductionScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              const Text(
-                'This is not a production app. This quiz app is made for practical purpose the firebase integrations, state management, and the app flow.',
+               Text(
+                LANG_CONST.APP_INTRODUCTION.toString().tr,
+                //'This is not a production app. This quiz app is made for practical purpose the firebase integrations, state management, and the app flow.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   color: kOnSurfaceTextColor,
                   fontWeight: FontWeight.bold

@@ -11,7 +11,7 @@ class Logger {
 
   void log(Object object) {
     if (!const bool.fromEnvironment("dart.vm.product")) {
-      lg.log("Quiz : $object");
+      lg.log("Quiz Sample : $object");
     }
   }
 }

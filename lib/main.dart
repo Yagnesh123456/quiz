@@ -2,11 +2,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:quiz/translations/app_translations.dart';
+import 'package:quiz/utils/language_constant.dart';
+
 import 'bindings/initial_binding.dart';
 import 'controllers/common/theme_controller.dart';
 import 'firebase_options.dart';
 import 'routes/app_routes.dart';
-import 'screens/data_uploader_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,12 +30,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       navigatorKey: navigatorKey,
-      title: 'Flutter Demo',
+      title: LANG_CONST.TITLE.toString().tr,
       theme: Get.find<ThemeController>().getLightheme(),
       darkTheme: Get.find<ThemeController>().getDarkTheme(),
       themeMode: ThemeMode.system,
       getPages: AppRoutes.pages(),
       debugShowCheckedModeBanner: false,
+      locale: const Locale('en', 'US'),
+      translationsKeys: AppTranslation.translations,
+      fallbackLocale: const Locale('en', 'US'),
     );
   }
 }
@@ -44,11 +49,3 @@ Future<void> initFireBase() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
 }
-
-// void main(List<String> args) async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await initFireBase();
-//   runApp(GetMaterialApp(
-//     home: DataUploaderScreen(),
-//   ));
-// }

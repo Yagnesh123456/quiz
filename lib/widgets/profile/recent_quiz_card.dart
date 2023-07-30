@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
-import 'package:quiz/controllers/quiz_paper/quiz_papers_controller.dart';
 import 'package:quiz/models/models.dart';
 import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
@@ -52,7 +50,7 @@ class RecentQuizCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        recentTest.papername!,
+                        recentTest.papername ?? '',
                         style: cardTitleTs(context),
                       ),
                       const SizedBox(

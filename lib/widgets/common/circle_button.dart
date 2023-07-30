@@ -26,19 +26,6 @@ class CircularButton extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: child,
             ))
-
-        //   RawMaterialButton(
-        //    padding: const EdgeInsets.all(4),
-        //   elevation: 0.0,
-        //   child: child,
-        //   onPressed: onTap,
-        //   constraints: BoxConstraints.tightFor(
-        //     width: width,
-        //     height: width,
-        //   ),
-        //   shape: const CircleBorder(),
-        //   //fillColor: Color(0xFF4C4F5E),
-        // ),
         );
   }
 }

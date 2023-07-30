@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class ProfileScreen extends GetView<ProfileController> {
@@ -41,11 +42,11 @@ class ProfileScreen extends GetView<ProfileController> {
                       )
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 20),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
                     child: Text(
-                      'My recent tests ',
-                      style: TextStyle(
+                      LANG_CONST.MY_RECENT_TESTS.toString().tr,
+                      style: const TextStyle(
                           color: kOnSurfaceTextColor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -71,9 +72,9 @@ class ProfileScreen extends GetView<ProfileController> {
                                 recentTest: controller.allRecentTest[index]);
                           },
                         )
-                      : const Center(
+                      : Center(
                           child: Text(
-                            'No Record Found',
+                            LANG_CONST.NO_RECORD_FOUND.toString().tr,
                             style: kQuizeTS,
                           ),
                         ),

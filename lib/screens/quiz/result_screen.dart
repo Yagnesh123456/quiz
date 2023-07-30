@@ -4,12 +4,13 @@ import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/screens/screens.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 import 'answer_check_screen.dart';
 
-class Resultcreen extends GetView<QuizController> {
-  const Resultcreen({Key? key}) : super(key: key);
+class ResultScreen extends GetView<QuizController> {
+  const ResultScreen({Key? key}) : super(key: key);
 
   static const String routeName = '/resultscreen';
 
@@ -40,19 +41,20 @@ class Resultcreen extends GetView<QuizController> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20, bottom: 5),
                       child: Text(
-                        'Congratulations',
+                        LANG_CONST.CONGRATULATIONS.toString().tr,
                         style: kHeaderTS.copyWith(color: _textColor),
                       ),
                     ),
                     Text(
-                      'You have got ${controller.points} Points',
+                      LANG_CONST.YOU_HAVE_GOT_POINTS.toString().tr
+                          .replaceAll("XXXXXX", controller.points),
                       style: TextStyle(color: _textColor),
                     ),
                     const SizedBox(
                       height: 25,
                     ),
-                    const Text(
-                      'Tap below question numbers to view correct answers',
+                     Text(
+                      LANG_CONST.TAP_BELOW_QUESTION_NUMBER.toString().tr,
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(
@@ -111,7 +113,7 @@ class Resultcreen extends GetView<QuizController> {
                           onTap: () {
                            controller.tryAgain();
                           },
-                          title: 'Retake',
+                          title: LANG_CONST.RETAKE.toString().tr,
                         )),
                         const SizedBox(width: 5,),
                         Expanded(
@@ -119,7 +121,7 @@ class Resultcreen extends GetView<QuizController> {
                           onTap: () {
                             controller.saveQuizResults();
                           },
-                          title: 'Go to home',
+                          title: LANG_CONST.GO_TO_HOME.toString().tr,
                         ))
                       ],
                     )),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'sub_theme_data_mixin.dart';
 
-//const Color kPrimayLightColorLT = Color.fromARGB(255, 175, 84, 255);
 const Color kPrimayLightColorLT = Color.fromARGB(255, 178, 110, 246);
-//const Color kPrimayColorLT = Color.fromARGB(255, 120, 30, 255);
 const Color kPrimayColorLT = Color.fromARGB(255, 176, 136, 246);
 const Color appBarIconColorLT = Colors.white;
 const Color mainTextColorLT = Color.fromARGB(255, 40, 40, 40);

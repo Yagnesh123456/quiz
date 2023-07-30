@@ -1,10 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/screens/auth_and_profile/profile_screen.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
 
@@ -41,7 +41,7 @@ class HomeScreen extends GetView<MyDrawerController> {
                       onPressed: () {
                         controller.signIn();
                       },
-                      label: const Text("Sign in"))
+                      label: Text(LANG_CONST.SIGN_IN.toString().tr))
                       : GestureDetector(
                     onTap: () {
                       Get.toNamed(ProfileScreen.routeName);
@@ -68,9 +68,10 @@ class HomeScreen extends GetView<MyDrawerController> {
                     builder: (_) {
                       final AuthController _auth = Get.find();
                       final user = _auth.getUser();
-                      String _label = '  Hello mate';
+                      String _label = LANG_CONST.HELLO.toString().tr + " "+
+                          LANG_CONST.MATE.toString().tr;
                       if (user != null) {
-                        _label = '  Hello ${user.displayName}';
+                        _label = '${LANG_CONST.HELLO.toString().tr} ${user.displayName}';
                       }
                       return Text(_label,
                           style: kDetailsTS.copyWith(
@@ -99,12 +100,12 @@ class HomeScreen extends GetView<MyDrawerController> {
                 ],
               ),
 
-              Padding(
+               Padding(
                 padding: const EdgeInsets.all(kMobileScreenPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text('What Do You Want To Improve Today ?',
+                  children: [
+                    Text(LANG_CONST.WHAT_DO_YOU_WANT.toString().tr,
                         style: kHeaderTS),
                   ],
                 ),

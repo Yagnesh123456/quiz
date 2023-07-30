@@ -5,6 +5,8 @@ import 'package:quiz/configs/themes/custom_text_styles.dart';
 import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/firebase/firebase_configs.dart';
 import 'package:quiz/models/models.dart';
+import 'package:quiz/utils/language_constant.dart';
+import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class LeaderBoardScreen extends GetView<LeaderBoardController> {
@@ -54,9 +56,9 @@ class LeaderBoardScreen extends GetView<LeaderBoardController> {
                         );
                       },
                     )
-                        : const Center(
+                        :  Center(
                           child: Text(
-                      'No Record Found',
+                      LANG_CONST.NO_RECORD_FOUND.toString().tr,
                       style: kQuizeTS,
                     ),
                         ),
@@ -104,9 +106,7 @@ class LeaderBoardCard extends StatelessWidget {
               style: tsStyle,
             ),
           ),
-          SizedBox(
-            width: 12,
-          ),
+          horizontalSpace(width: 12),
           IconWithText(
             icon: Icon(
               Icons.timer,
@@ -117,8 +117,8 @@ class LeaderBoardCard extends StatelessWidget {
               style: tsStyle,
             ),
           ),
-          SizedBox(
-            width: 12,
+          horizontalSpace(
+            width: 12.0
           ),
           IconWithText(
             icon: Icon(

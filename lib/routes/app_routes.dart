@@ -34,7 +34,7 @@ class AppRoutes {
               Get.put(LeaderBoardController());
             })),
         GetPage(
-            page: () => QuizeScreen(),
+            page: () => const QuizeScreen(),
             name: QuizeScreen.routeName,
             binding: BindingsBuilder(() {
               Get.put<QuizController>( QuizController());
@@ -45,6 +45,6 @@ class AppRoutes {
         GetPage(
             page: () => const QuizOverviewScreen(),
             name: QuizOverviewScreen.routeName),
-        GetPage(page: () => const Resultcreen(), name: Resultcreen.routeName),
+        GetPage(page: () => const ResultScreen(), name: ResultScreen.routeName),
       ];
 }

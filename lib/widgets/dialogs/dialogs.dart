@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/utils/language_constant.dart';
 
 class Dialogs {
   static final Dialogs _singleton = Dialogs._internal();
@@ -12,18 +13,20 @@ class Dialogs {
 
   static Widget quizStartDialog({required VoidCallback onTap}) {
     return AlertDialog(
-     // title: const Text("Hi.."),
+      // title: const Text("Hi.."),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-        
-          Text("Hi..", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-          Text("Please login before start the quiz"),
+        children: [
+          Text(
+            LANG_CONST.HI.toString().tr,
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          Text(LANG_CONST.PLEASE_LOGIN_BEFORE_START.toString().tr),
         ],
       ),
       actions: <Widget>[
-        TextButton(onPressed: onTap, child: const Text('Okay'))
+        TextButton(onPressed: onTap, child: Text(LANG_CONST.OKAY.toString().tr))
       ],
     );
   }
@@ -35,10 +38,12 @@ class Dialogs {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-
-            Text("Sorry..", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-            Text("TimesUp. Please try again!!!"),
+          children: [
+            Text(
+              LANG_CONST.SORRY.toString().tr,
+              style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+            Text(LANG_CONST.TIMES_UP_PLEASE_TRY_AGAIN.toString().tr),
           ],
         ),
         actions: <Widget>[
@@ -48,24 +53,24 @@ class Dialogs {
     );
   }
 
-  static Future<bool> quizEndDialog() async{
-     return (await showDialog(
-      context: Get.overlayContext!,
-      builder: (context) =>  AlertDialog(
-        title:  const Text('Are you sure?'),
-        content:  const Text('Do you want to exit the quiz without completing it ?'),
-        actions: <Widget>[
-          TextButton(
-            onPressed: () =>  Get.back(result: false),
-            child:  const Text('No'),
+  static Future<bool> quizEndDialog() async {
+    return (await showDialog(
+          context: Get.overlayContext!,
+          builder: (context) => AlertDialog(
+            title: Text(LANG_CONST.ARE_YOU_SURE.toString().tr),
+            content: Text(LANG_CONST.DO_YOU_WANT_TO_EXIT.toString().tr),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () => Get.back(result: false),
+                child: Text(LANG_CONST.NO.toString().tr),
+              ),
+              TextButton(
+                onPressed: () => Get.back(result: true),
+                child:  Text(LANG_CONST.YES.toString().tr),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () => Get.back(result: true),
-            child:  const Text('Yes'),
-          ),
-        ],
-      ),
-    )) ?? false;
-
+        )) ??
+        false;
   }
 }

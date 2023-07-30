@@ -5,6 +5,7 @@ import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/controllers/quiz_paper/quiz_papers_controller.dart';
 import 'package:quiz/models/quiz_paper_model.dart';
 import 'package:quiz/screens/screens.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/common/sizebox_space.dart';
 import 'package:quiz/widgets/widgets.dart';
 
@@ -71,7 +72,7 @@ class QuizPaperCard extends GetView<QuizPaperController> {
                                   icon: Icon(Icons.help_outline_sharp,
                                       color: Colors.blue[700]),
                                   text: Text(
-                                    '${model.questionsCount} quizzes',
+                                    '${model.questionsCount} ${LANG_CONST.QUIZZES.toString().tr}',
                                     style: kDetailsTS.copyWith(
                                         color: Colors.blue[700]),
                                   )),

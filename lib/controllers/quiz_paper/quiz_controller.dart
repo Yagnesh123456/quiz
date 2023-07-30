@@ -156,7 +156,7 @@ class QuizController extends GetxController {
 
   void complete(){
      _timer!.cancel();
-     Get.offAndToNamed(Resultcreen.routeName);
+     Get.offAndToNamed(ResultScreen.routeName);
   }
 
   void tryAgain(){

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/auth_controller.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class LoginScreen extends GetView<AuthController> {
@@ -24,12 +25,12 @@ class LoginScreen extends GetView<AuthController> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset('assets/images/app_splash_logo.svg'),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 60),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 60),
                 child: Text(
-                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                  LANG_CONST.LOREM_TEXT.toString().tr,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -49,7 +50,7 @@ class LoginScreen extends GetView<AuthController> {
                         )),
                     Center(
                       child: Text(
-                        'Sign in  with google',
+                        LANG_CONST.SIGN_IN_WITH_GOOGLE.toString().tr,
                         style: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold),

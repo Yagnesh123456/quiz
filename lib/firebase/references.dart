@@ -17,5 +17,4 @@ CollectionReference<Map<String, dynamic>> getleaderBoard({required String paperI
 
 DocumentReference questionsFR({required String paperId, required String questionsId}) => quizePaperFR.doc(paperId).collection('questions').doc(questionsId);
 
-//Reference get firebaseStorage => FirebaseStorage.instanceFor(bucket: 'gs://fire-base-chat-cc3e9.appspot.com').ref();
 Reference get firebaseStorage => FirebaseStorage.instance.ref();

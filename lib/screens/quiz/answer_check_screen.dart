@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:quiz/configs/configs.dart';
 import 'package:quiz/controllers/controllers.dart';
 import 'package:quiz/screens/quiz/result_screen.dart';
+import 'package:quiz/utils/language_constant.dart';
 import 'package:quiz/widgets/widgets.dart';
 
 class AnswersCheckScreen extends GetView<QuizController> {
@@ -19,7 +20,7 @@ class AnswersCheckScreen extends GetView<QuizController> {
             'Q. ${(controller.questionIndex.value + 1).toString().padLeft(2, '0')}', style: kAppBarTS,)),
         showActionIcon: true,
         onMenuActionTap: () {
-          Get.toNamed(Resultcreen.routeName);
+          Get.toNamed(ResultScreen.routeName);
         },
       ),
       body: BackgroundDecoration(
@@ -114,7 +115,7 @@ class AnswersCheckScreen extends GetView<QuizController> {
                           onTap: () {
                             controller.nextQuestion();
                           },
-                          title: 'Next',
+                          title: LANG_CONST.NEXT.toString().tr,
                         ),
                       )
                     ],
