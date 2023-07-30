@@ -42,8 +42,11 @@ class QuizeScreen extends GetView<QuizController> {
             child: Obx(
               () => Column(
                 children: [
-                  LinearProgressIndicator(
-                    value: controller.consumedData.value,
+                  Padding(
+                    padding: const EdgeInsets.only(left:kMobileScreenPadding,right: kMobileScreenPadding),
+                    child: LinearProgressIndicator(
+                      value: controller.consumedData.value,
+                    ),
                   ),
                   if (controller.loadingStatus.value == LoadingStatus.loading)
                     const Expanded(
