@@ -2,13 +2,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:quiz/translations/app_translations.dart';
-import 'package:quiz/utils/language_constant.dart';
+import 'package:quiz/configs/routes/app_routes.dart';
+import 'package:quiz/app/translations/app_translations.dart';
+import 'package:quiz/app/utils/language_constant.dart';
+import 'presentation/bindings/initial_binding.dart';
+import 'presentation/controllers/common/theme_controller.dart';
+import 'data/firebase/firebase_options.dart';
 
-import 'bindings/initial_binding.dart';
-import 'controllers/common/theme_controller.dart';
-import 'firebase_options.dart';
-import 'routes/app_routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

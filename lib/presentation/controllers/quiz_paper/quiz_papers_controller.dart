@@ -1,0 +1,52 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:quiz/presentation/controllers/auth_controller.dart';
+import 'package:quiz/data/firebase/references.dart';
+import 'package:quiz/data/models/models.dart' show QuizPaperModel;
+import 'package:quiz/presentation/pages/quiz/quiz_screen.dart';
+import 'package:quiz/data/services/firebase/firebasestorage_service.dart';
+import 'package:quiz/app/utils/logger.dart';
+
+class QuizPaperController extends GetxController {
+  @override
+  void onReady() {
+    getAllPapers();
+    super.onReady();
+  }
+
+  final allPapers = <QuizPaperModel>[].obs;
+  final allPaperImages = <String>[].obs;
+
+  Future<void> getAllPapers() async {
+    try {
+      QuerySnapshot<Map<String, dynamic>> data = await quizePaperFR.get();
+      final paperList =
+          data.docs.map((paper) => QuizPaperModel.fromSnapshot(paper)).toList();
+      allPapers.assignAll(paperList);
+
+      for (var paper in paperList) {
+        final imageUrl =
+            await Get.find<FireBaseStorageService>().getImage(paper.title);
+        paper.imageUrl = imageUrl;
+      }
+      allPapers.assignAll(paperList);
+    } catch (e) {
+      Logger.get().log(e);
+    }
+  }
+
+  void navigatoQuestions({required QuizPaperModel paper, bool isTryAgain = false}) {
+    AuthController _authController = Get.find();
+
+    if (_authController.isLogedIn()) {
+      if (isTryAgain) {
+        Get.back();
+        Get.offNamed(QuizeScreen.routeName, arguments: paper, preventDuplicates: false);
+      } else {
+        Get.toNamed(QuizeScreen.routeName, arguments: paper);
+      }
+    } else {
+      _authController.showLoginAlertDialog();
+    }
+  }
+}
